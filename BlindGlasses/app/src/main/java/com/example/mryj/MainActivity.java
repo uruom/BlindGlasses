@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import Veriable.TransmissionVeriable;
+import musicPlay.PlayMusic;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_start;
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayerIsEnd;
     private MediaPlayer mediaPlayerIsStart;
     private MediaPlayer mediaPlayerRunning;
+    private MediaPlayer mediaPlayerLeft;
     public String text_p;
 
     @Override
@@ -55,5 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+    TransmissionVeriable transmissionVeriable = TransmissionVeriable.getInstance();
+    PlayMusic playMusic = new PlayMusic();
+    private void running(){
+        playMusic.startPlay(transmissionVeriable);
     }
 }

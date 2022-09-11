@@ -1,5 +1,6 @@
 package Veriable;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
 /**
@@ -18,8 +19,10 @@ public class TransmissionVeriable {
      * state 当前状态，即进行到了哪个步骤（all set，get）
      * Isfinished 当前状态是否完成，是否可进入下一个状态
      */
-    private Image leftImage = null;
-    private  Image rightImage = null;
+    private Bitmap leftImage = null;
+    private Bitmap rightImage = null;
+//    private Image leftImage = null;
+//    private  Image rightImage = null;
     private int timeStamp = 0;
     private float coordinateX = 0, coordinateY = 0;
     private Edirection direction = null;
@@ -39,11 +42,11 @@ public class TransmissionVeriable {
         return timeStamp;
     }
 
-    public Image getLeftImage() {
+    public Bitmap getLeftImage() {
         return leftImage;
     }
 
-    public Image getRightImage() {
+    public Bitmap getRightImage() {
         return rightImage;
     }
 
@@ -79,12 +82,12 @@ public class TransmissionVeriable {
         this.distance = distance;
     }
 
-    public void setLeftImage(Image leftImage) {
-        this.leftImage = leftImage;
+    public void setRightImage(Bitmap rightImage) {
+        this.rightImage = rightImage;
     }
 
-    public void setRightImage(Image rightImage) {
-        this.rightImage = rightImage;
+    public void setLeftImage(Bitmap leftImage) {
+        this.leftImage = leftImage;
     }
 
     public void setState(Estate state) {
